@@ -1,8 +1,9 @@
+import turtle
 from turtle import Screen
 from snake import Snake
+from food import Food
 import time
-# this is to test changes to the file and
-# push them to github
+
 
 screen = Screen()
 screen.setup(width=600, height=600)
@@ -25,6 +26,10 @@ while game_is_on:
     time.sleep(0.1)
 
     snake.move()
+
+    # Detect collision with food using turtle.distance()
+    if snake.head.distance(food) < 15:
+        food.refresh()
 
 
 screen.exitonclick()
