@@ -1,6 +1,8 @@
 from turtle import Screen
 from snake import Snake
 import time
+# this is to test changes to the file and
+# push them to github
 
 screen = Screen()
 screen.setup(width=600, height=600)
